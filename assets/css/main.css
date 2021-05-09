@@ -70,6 +70,7 @@ footer h6{
     background: rgba(255, 255, 255, 0.1);
     box-shadow: inset 0.4px -0.4px 0.4px rgba(214, 214, 214, 0.4), inset -0.4px 0.4px 0.4px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 100%;
     padding: 8px;
     transition: .3s;
@@ -135,10 +136,11 @@ footer h6{
 }
 .navbar-dark .navbar-toggler{
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 /* Start of Banner */
 .banner{
-    color: #DCDCDC, 100%;
+    color: #DCDCDC;
     margin: 100px 0px 0px;
 }
 .banner h1, .about h1, .token-sec h1, .roadmap h1, .faq-block h1, .btn-circle, .white-wrap h1, .dark-wrap h1, .white-wrap h2, .announcementbg h1, .ctm-pills button, .bigtext, .nft-content h1, .nftmining h1, .nft-rightcontent h4, .footer-logoblock h4{
@@ -174,6 +176,7 @@ footer h6{
     background: rgba(185, 13, 13, 0.15);
     box-shadow: inset 1.16px -1.16px 1.16px rgba(185, 13, 13, 0.4), inset -1.16px 1.16px 1.16px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
 }
 .cto-btn{
     font-size: 12px;
@@ -188,6 +191,7 @@ footer h6{
     background: rgba(185, 13, 13, 0.15);
     box-shadow: inset 1.16px -1.16px 1.16px rgba(185, 13, 13, 0.4), inset -1.16px 1.16px 1.16px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
 }
 .cto-logo img{
     padding:10px;
@@ -196,8 +200,8 @@ footer h6{
 .downarrow {
     text-align: left;
     margin-top: 10%;
-    /* position: absolute; */
-    bottom: 0%;
+    position: absolute;
+    bottom: 3%;
   }
   .bounce {
     -webkit-animation: bounce 5s infinite;
@@ -328,7 +332,7 @@ color: #B90D0D;
     left: 0;
 }
 .about, .token-sec, .roadmap-sec, .nftbg{
-    background:#0D0E13, 100%;
+    background:#0D0E13;
     position: relative;
 }
 .total-details li {
@@ -337,7 +341,7 @@ color: #B90D0D;
 }
 .about, .roadmap-sec {
     background: radial-gradient(50% 50% at 50.03% 50%, #151821 41.15%, #0D0E13 86.85%);
-    z-index: -100;
+    z-index: -1;
 }
 .token-fact, .token-sec, .roadmap-sec, .blurbg, .nftmining{
     padding: 80px 0px;
@@ -406,8 +410,9 @@ color: #B90D0D;
     /* Glass Container + Drop */
     box-shadow: 0px 16px 16px 8px rgba(0, 0, 0, 0.25), inset 62.7333px -62.7333px 62.7333px rgba(24, 26, 31, 0.1), inset -62.7333px 63px 62.7333px -59px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-radius: 16px;
-    opacity: 0.9;
+    opacity: 1;
 }
 .token-w{
     position:relative;
@@ -709,9 +714,11 @@ color: #B90D0D;
     background-size: cover;
 }
 .blurbg{
-    z-index: 0;
+    z-index: -100;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
+/* -- BROKEN IN SAFARI --
 .blurbg::after{
     content: '';
     position: absolute;
@@ -723,12 +730,13 @@ color: #B90D0D;
     width: 100%;
     height: 100%;
     background-size: cover;
-    z-index: -2;
+    z-index: -100;
 }
+*/
 .smbtn{
     display: flex;
     align-items: center;
-    margin-left: -125px;
+    margin-left: -110px;
 }
 .smbtn ul li a{
     border: 1.5px solid #FFFFFF;
@@ -751,7 +759,7 @@ color: #B90D0D;
     padding: 30px;
     margin-top: 25px;
     min-height: 683px;
-    opacity: 0.7;
+    opacity: 1;
 }
 .announce-block h4{
     font-family: Montserrat;
@@ -768,6 +776,9 @@ color: #B90D0D;
     line-height: 24px;
     margin:20px 0px;
 }
+.announce-block img{
+    border-radius: 8px;
+}
 .btnread-more a{
     font-weight: 800;
     font-size: 12px;
@@ -781,6 +792,7 @@ color: #B90D0D;
     background: rgba(185, 13, 13, 0.15);
     box-shadow: inset 1.16px -1.16px 1.16px rgb(185 13 13 / 40%), inset -1.16px 1.16px 1.16px rgb(255 255 255 / 40%);
     backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
 }
 .announce-block-content{
     margin-top:25px;
@@ -881,6 +893,7 @@ color: #B90D0D;
     background: rgba(185, 13, 13, 0.1);
     box-shadow: inset 1.16px -1.16px 1.16px rgba(185, 13, 13, 0.4), inset -1.16px 1.16px 1.16px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 4px;
@@ -900,6 +913,16 @@ article h5 {
 }
 .token-fact-block a, .fo-copyright a{
     text-decoration:none;
+}
+#vladCopyButton, #lifeCopyButton i{
+    color: #B90D0D;
+}
+#vladCopyButton i:hover, #lifeCopyButton i:hover{
+    opacity: .8;
+}
+
+#vladCopyButton img, #lifeCopyButton img{
+    margin-left: 6px;
 }
 .contest-block, .genesis-wrap{
     border-radius: 25px;
@@ -1008,6 +1031,9 @@ footer{
 }
 .fdeactive a{
     opacity: 0.5 !important;
+    cursor: default;
+    pointer-events: none;
+
 }
 .footer-sm ul li a, .footermenu li a{
     position: relative;
@@ -1255,6 +1281,7 @@ footer{
     box-sizing: border-box;
     box-shadow: 0px 16px 16px 8px rgb(0 0 0 / 25%), inset 62.7333px -62.7333px 62.7333px rgb(24 26 31 / 10%), inset -62.7333px 63px 62.7333px -59px rgb(255 255 255 / 10%);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 8px;
     }
     .navbarshow ul{

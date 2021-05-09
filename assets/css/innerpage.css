@@ -12,12 +12,18 @@
     min-height: 664px;
     height: 95vh;
     position: relative;
+    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 1));
 }
 .team-bg{
     background: url(../images/teambg.jpg) no-repeat;
     background-position: 0% 0;
     min-height: 464px;
     position: relative;
+    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 1));
+    z-index: 0;
+}
+.team-heading h2{
+    z-index: 100;
 }
 .token-bg, .team-bg{
     background-size: cover;
@@ -47,6 +53,7 @@
     background: rgba(185, 13, 13, 0.15);
     box-shadow: inset 1.16px -1.16px 1.16px rgb(185 13 13 / 40%), inset -1.16px 1.16px 1.16px rgb(255 255 255 / 40%);
     backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
 }
 .circle-logo img{
     padding: 7px;
@@ -54,7 +61,7 @@
     height: 40px;
 }
 .innersec, .lifesec, .alifesec, .nftfactsec, .breakdown{
-    padding:100px 0px 0px 0px;
+    padding:150px 0px 0px 0px;
 }
 .side-main, .side-main-two, .team-blockbg{
     position: relative;
@@ -66,10 +73,11 @@
     box-sizing: border-box;
     box-shadow: 0px 16px 16px 8px rgba(0, 0, 0, 0.25), inset 62.7333px -62.7333px 62.7333px rgba(24, 26, 31, 0.1), inset -62.7333px 63px 62.7333px -59px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-radius: 16px;
     padding: 40px 32px;
     min-height: 776px;
-    opacity: 0.9;
+    opacity: 1;
 }
 .side-main::after{
     content: '';
@@ -365,9 +373,13 @@
     box-sizing: border-box;
     box-shadow: 0px 16px 16px 8px rgba(0, 0, 0, 0.25), inset 62.7333px -62.7333px 62.7333px rgba(24, 26, 31, 0.1), inset -62.7333px 63px 62.7333px -59px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-radius: 8px;
     padding: 25px;
     min-height: 300px
+}
+.team-block p{
+    line-height: 25px;
 }
 .mt-3x{
     margin-top:30px;
@@ -430,6 +442,7 @@ line-height: 22px;
     box-shadow: inset 0.4px -0.4px 0.4px rgba(214, 214, 214, 0.4), inset -0.4px 0.4px 0.4px rgba(255, 255, 255, 0.4);
     /*border:1px solid rgb(214 214 214 / 40%);*/
     backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
     align-items: center;
     margin-right:12px;
 }
