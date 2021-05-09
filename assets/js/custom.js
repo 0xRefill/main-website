@@ -39,6 +39,42 @@ $(document).ready(function() {
     });
 
 
+    $.ajax({
+        url: "https://api.vlad.finance/?query=vlad_supply",
+        success: function(vlad_circulating_supply){
+            $('#vlad-circulating-supply').text(vlad_circulating_supply + ' VLAD')
+        }
+    });
+
+
+    $.ajax({
+        url: "https://api.vlad.finance/?query=vlad_burned",
+        success: function(vlad_burned){
+            $('#vlad-burned').text(vlad_burned + ' VLAD')
+        }
+    });
+
+    $.ajax({
+        url: "https://api.vlad.finance/?query=life_supply",
+        success: function(life_total_supply){
+            $('#life-total-supply').text(life_total_supply + ' LIFE')
+        }
+    });
+
+
+    $.ajax({
+        url: "https://api.vlad.finance/?query=life_circulating",
+        success: function(life_circulating_supply){
+            $('#life-circulating-supply').text(life_circulating_supply + ' LIFE')
+        }
+    });
+
+    $.ajax({
+        url: "https://api.vlad.finance/?query=life_burned",
+        success: function(life_burned){
+            $('#life-burned').text(life_burned + ' LIFE')
+        }
+    });
 });
 
 $(function () {

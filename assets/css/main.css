@@ -196,7 +196,7 @@ footer h6{
 .downarrow {
     text-align: left;
     margin-top: 10%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0%;
   }
   .bounce {
@@ -441,7 +441,7 @@ color: #B90D0D;
     margin: 0px 48px;
 }
 .content-head1::before{
-    background-image: url(../images/Vlad-logo.svg);
+    background-image: url(../images/VLAD-logo.svg);
     background-repeat:no-repeat;
 }
 .content-head2::before{
@@ -709,8 +709,8 @@ color: #B90D0D;
     background-size: cover;
 }
 .blurbg{
-    position: relative;
     z-index: 0;
+    backdrop-filter: blur(4px);
 }
 .blurbg::after{
     content: '';
