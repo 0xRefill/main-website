@@ -197,7 +197,7 @@ footer h6{
     text-align: left;
     margin-top: 10%;
     position: absolute;
-    bottom: 3%;
+    bottom: 0%;
   }
   .bounce {
     -webkit-animation: bounce 5s infinite;
@@ -407,6 +407,7 @@ color: #B90D0D;
     box-shadow: 0px 16px 16px 8px rgba(0, 0, 0, 0.25), inset 62.7333px -62.7333px 62.7333px rgba(24, 26, 31, 0.1), inset -62.7333px 63px 62.7333px -59px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
     border-radius: 16px;
+    opacity: 0.9;
 }
 .token-w{
     position:relative;
@@ -750,7 +751,7 @@ color: #B90D0D;
     padding: 30px;
     margin-top: 25px;
     min-height: 683px;
-    opacity: 1;
+    opacity: 0.7;
 }
 .announce-block h4{
     font-family: Montserrat;

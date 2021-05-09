@@ -100,7 +100,7 @@
                                 </ul>
                             </div>
                             <div class="downarrow bounce">
-                                <a class=""href="#"><img src="assets/images/scroll-down-icon.svg" class="img-fluid" alt=""></a>
+                                <a class=""href="#about"><img src="assets/images/scroll-down-icon.svg" class="img-fluid" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
             <!-- End of Banner Text -->
         </div>
         <!-- Start of About Section -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
@@ -309,79 +309,6 @@
                 </div>
             <!-- Slider -->
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script type="text/javascript">
-            $(function () {
-                var mediumPromise = new Promise(function (resolve) {
-                var $content = $('#medium');
-                var data = {
-                    rss: 'https://vlad-finance.medium.com/feed'
-                };
-                $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40vlad-finance', data, function (response) {
-                    if (response.status == 'ok') {
-
-                        var output = '';
-                        var k = 0;
-                        $.each(response.items, function (k, item) {
-                            output += `<div class="col-sm-12 col-md-4 item"> <div class="announce-block">`;
-                            var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
-                            var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
-                            var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
-                            var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
-                            var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
-                            output += `<div style="border-radius: 8px; height:200px;line-height:200px; overflow:hidden;"><img src="${src}" alt="Cover image" width="100%" /></div>`;
-                            output += `<div class="announce-block-content">`;
-                            output += `<h4>${item.title}</h4>`;
-                            var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
-                            yourString = yourString.replace('h4', 'p');
-                            yourString = yourString.replace('h3', 'p');
-                            var maxLength = 400; // maximum number of characters to extract
-                            //trim the string to the maximum length
-                            var trimmedString = yourString.substr(0, maxLength);
-                            //re-trim if we are in the middle of a word
-                            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-                            output += `<p>${trimmedString}...</p>`;
-                            output += `<div class="btnread-more"><a href="${item.link}" target="_blank">Read More</a></div>`;
-                            output += '</div></div></div>';
-                            k++;
-                            return k < 9;
-                        });
-                        resolve($content.html(output));
-                    }
-                });
-                });
-
-                mediumPromise.then(function()
-                {
-                    //Pagination
-
-                    pageSize = 3;
-
-                    var pageCount = $(".item").length / pageSize;
-
-                    for (var i = 0; i < pageCount; i++) {
-                        $("#pagein").append(`<li class="page-item"><a class="page-link" href="#medium">${(i + 1)}</a></li> `);
-                    }
-                    $("#pagein li:nth-child(1)").addClass("active");
-                    showPage = function (page) {
-                        $(".item").hide();
-                        $(".item").each(function (n) {
-                            if (n >= pageSize * (page - 1) && n < pageSize * page)
-                                $(this).show();
-                        });
-                    }
-
-                    showPage(1);
-
-                    $("#pagein li").click(function () {
-                        $("#pagein li").removeClass("active");
-                        $(this).addClass("active");
-                        showPage(parseInt($(this).text()))
-                    });
-                });
-            });
-
-            </script>
             <div class="container">
                 <div class="row" id="medium">
                     <!--Medium content goes here-->
@@ -560,21 +487,5 @@
     <!-- NFT Fact Slider -->
     <script  src="assets/js/nftfactscript.js"></script>
 
-    <!-- JS for Collapse -->
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
 
-        for (i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-              panel.style.maxHeight = null;
-            } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-          });
-        }
-    </script>
 </body>
