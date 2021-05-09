@@ -784,6 +784,8 @@ color: #B90D0D;
 }
 .announce-block-content{
     margin-top:25px;
+    height: 460px;
+    overflow: hidden;
 }
 .card-img-top {
     height: 178px;
