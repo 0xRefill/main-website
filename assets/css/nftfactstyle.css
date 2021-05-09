@@ -1,0 +1,78 @@
+/* .container {
+  background: #E1ECE7;
+  width: 100%;
+} */
+.nftfactslide:after {
+  clear: both;
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.nbs-flexisel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nbs-flexisel-ul {
+  position: relative;
+  width: 9999px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nbs-flexisel-inner {
+  overflow: hidden;
+  float: left;
+  width: 100%;
+}
+
+.nbs-flexisel-item {
+  width:33.333%;
+  float: left;
+  margin: 15px;
+  padding: 0px;
+  /* cursor: pointer; */
+  position: relative;
+  line-height: 0px;
+}
+
+.nbs-flexisel-item img {
+  width: 100%;
+  /* cursor: pointer; */
+  position: relative;
+  /* filter: drop-shadow(30px 10px 4px #000000); */
+  -webkit-box-shadow: 0px 57px 89px -58px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 57px 89px -58px rgba(0,0,0,0.75);
+box-shadow: 0px 57px 89px -58px rgba(0,0,0,0.75);
+  /* margin-top: 70px;
+  margin-bottom: 70px;*/
+}
+
+/*** Navigation ***/
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.5;
+}
+
+.nbs-flexisel-nav-left {
+  left: 0px;
+  background:url(../images/prevarrow.png);
+}
+.nbs-flexisel-nav-right {
+  right: 0px;
+  background:url(../images/nextarrow.png);
+}
+.nbs-flexisel-nav-right, .nbs-flexisel-nav-left{
+  background-repeat: no-repeat;
+  background-size: 34px 34px;
+}
