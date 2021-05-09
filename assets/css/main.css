@@ -200,7 +200,7 @@ footer h6{
 .downarrow {
     text-align: left;
     margin-top: 10%;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 3%;
   }
   .bounce {
