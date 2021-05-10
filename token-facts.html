@@ -112,17 +112,6 @@
                         <p>Vlad.Finance consists of multiple tokens which are critical to the ecosystem including:
                             $VLAD, $LIFE and $aLIFE. These tokens are core to the platform and will bring utility and
                             function to its users.</p>
-                        <div class="banner-logo-btn">
-                            <ul>
-                                <li><a href="https://bscscan.com/token/0x279d41f3f78fe5c1f0ba41ae963d6e545113c973"
-                                        target="_blank" class="circle-logo"><i><img src="assets/images/vlad.svg"
-                                                class="img-fluid" alt=""></i></a></li>
-                                <li><a href="https://bscscan.com/token/0x50f4220C82c9325dC99f729C3328FB5c338BEaae"
-                                        target="_blank" class="circle-logo"><i><img src="assets/images/life.svg"
-                                                class="img-fluid" alt=""></i></a></li>
-                                <!-- <li><a href="#" class="circle-logo"><i><img src="assets/images/alife.svg" class="img-fluid" alt=""></i></a></li> -->
-                            </ul>
-                        </div>
                     </div>
                     <div class="downarrow bounce">
                         <a href="#vlad-token"><img src="assets/images/scroll-down-icon.svg" class="img-fluid"
@@ -176,10 +165,12 @@
                                 working your way to immortality.</p>
                         </article>
                         <div class="token-contract-container">
-                            <p>Contract Address: <a id="vladAddress"
-                                    href="https://bscscan.com/token/0x279d41f3f78fe5c1f0ba41ae963d6e545113c973"
-                                    target="_blank">0x279d41f3f78fe5c1f0ba41ae963d6e545113c973<i
-                                        class="far fa-copy ms-2"></i></a></p>
+                            <p>Contract Address:  <a id="vladAddress"
+                                href="https://bscscan.com/token/0x279d41f3f78fe5c1f0ba41ae963d6e545113c973"
+                                target="_blank">0x279d41f3f78fe5c1f0ba41ae963d6e545113c973</a>
+                                <span id="vladCopyButton"
+                                onclick="CopyToClipboard('vladAddress', 'vladCopyButton');"
+                                style="cursor:pointer;"><i class="far fa-copy ms-2"></i></span>
                         </div>
                     </div>
                     <div class="tokenomic">
@@ -279,10 +270,12 @@
                                 #6343945. To unlock one of the Genesis VLAD NFTs you will have to burn your $LIFE.</p>
                         </article>
                         <div class="token-contract-container">
-                            <p>Contract Address: <a id="lifeAddress"
-                                    href="https://bscscan.com/token/0x50f4220C82c9325dC99f729C3328FB5c338BEaae"
-                                    target="_blank">0x50f4220C82c9325dC99f729C3328FB5c338BEaae<i
-                                        class="far fa-copy ms-2"></i></a></p>
+                            <p>Contract Address:  <a id="lifeAddress"
+                                href="https://bscscan.com/token/0x50f4220C82c9325dC99f729C3328FB5c338BEaae"
+                                target="_blank">0x50f4220C82c9325dC99f729C3328FB5c338BEaae</a>
+                                <span id="lifeCopyButton"
+                                onclick="CopyToClipboard('lifeAddress', 'lifeCopyButton');"
+                                style="cursor:pointer;"><i class="far fa-copy ms-2"></i></span>
                         </div>
                     </div>
                     <div class="lifetokenomic">
@@ -354,7 +347,7 @@
                             <img src="assets/images/count-pepes-drakul.jpg" alt="count pepes drakul" class="img-fluid">
                             <div class="nft-head">
                                 <h6>Vlad Pepes Drakul</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Vladiator</span></p>
@@ -370,7 +363,7 @@
                                 class="img-fluid">
                             <div class="nft-head">
                                 <h6>Count Pepes Chocula</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Vladiator</span></p>
@@ -385,7 +378,7 @@
                             <img src="assets/images/papes-in-stone.jpg" alt="papes in stone" class="img-fluid">
                             <div class="nft-head">
                                 <h6>Pepes in Stone</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Vladiator</span></p>
@@ -416,7 +409,7 @@
                             <img src="assets/images/painted-pepe.jpg" alt="Painted Pepes" class="img-fluid">
                             <div class="nft-head">
                                 <h6>Painted Pepes</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Rare</span></p>
@@ -431,7 +424,7 @@
                             <img src="assets/images/all-hail-vlad.jpg" alt="All Hail Vlad" class="img-fluid">
                             <div class="nft-head">
                                 <h6>All Hail Vlad</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Rare</span></p>
@@ -446,7 +439,7 @@
                             <img src="assets/images/bankofvlad.jpg" alt="Bank of Vladhalla" class="img-fluid">
                             <div class="nft-head">
                                 <h6>Bank of Vladhalla</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Epic</span></p>
@@ -476,7 +469,7 @@
                             <img src="assets/images/silver-pepes.jpg" alt="Silver Pepes" class="img-fluid">
                             <div class="nft-head">
                                 <h6>Silver Pepes</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Epic</span></p>
@@ -491,7 +484,7 @@
                             <img src="assets/images/golden-pepes.jpg" alt="Golden Pepes" class="img-fluid">
                             <div class="nft-head">
                                 <h6>Golden Pepes</h6>
-                                <P>By <a href="#">@girmik</a></P>
+                                <P>By <a href="https://twitter.com/MicDoesThings" target="_blank">Michelangelo Girardi</a></P>
                             </div>
                             <div class="nft-smcontent">
                                 <p>Rarity<span>Legendary</span></p>
@@ -533,7 +526,7 @@
 
                 </ul>
             </div>
-            <div class="row">
+            <div class="row" style="clear:left;">
                 <div class="col-sm-12 col-md-12 nft-note">
                     <h4>TOTAL SUPPLY: <span>8,880</span></h4>
                     <p>* Starting Price - Epic and Legendary NFTs are priced on a bonding curve</p>
@@ -718,7 +711,7 @@
                     <ul class="footermenu">
                         <li><a href="token-facts.html">TOKEN FACTS</a></li>
                         <li><a href="https://app.vlad.finance/nft" target="_blank">NFTs</a></li>
-                        <li><a href="team.html">Team</a></li>
+                        <li><a href="team.html">TEAM</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-9 footer-sm">
@@ -777,17 +770,9 @@
                                 <li><a href="https://poocoin.app/tokens/0x50f4220c82c9325dc99f729c3328fb5c338beaae"
                                         target="_blank"><img src="assets/images/poocoin-icon.png" class="img-fluid"
                                             alt="">PooCoin</a></li>
-                                <li class="fdeactive"><img src="assets/images/fcoingecko.svg" class="img-fluid"
-                                        alt="">CoinGecko</li>
-                                <li class="fdeactive"><img src="assets/images/fcoinmarketcap.svg" class="img-fluid"
-                                        alt="CoinMarketCap">CoinMarketCap</li>
                                 <li><a href="https://goswappcharts.web.app/?isbsc=true&tokenId=0x50f4220C82c9325dC99f729C3328FB5c338BEaae"
                                         target="_blank"><img src="assets/images/fgoswapp.svg" class="img-fluid"
                                             alt="goswapp">GoSwapp</a></li>
-                                <li class="fdeactive"><img src="assets/images/fnomics.svg" class="img-fluid"
-                                        alt="">Nomics</li>
-                                <li class="fdeactive"><img src="assets/images/fLiveCoinWatch.svg" class="img-fluid"
-                                        alt="">LiveCoinWatch</li>
                             </ul>
                         </div>
                         <div class="col-sm-12 col-md-3">
