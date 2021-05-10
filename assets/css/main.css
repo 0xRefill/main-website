@@ -94,7 +94,7 @@ footer h6{
     text-transform: uppercase;
     padding: .9rem 1.3rem!important;
 }
-.tp-nav li a:after {
+.tp-nav li a:after, .pactive:after, .fpactive:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 12px;
     content: "";
