@@ -84,7 +84,7 @@ footer h6{
     fill: red;
 }
 .tp-nav li{
-    position: relative; 
+    position: relative;
 }
 .tp-nav li a{
     color:#fff!important;
@@ -94,7 +94,7 @@ footer h6{
     text-transform: uppercase;
     padding: .9rem 1.3rem!important;
 }
-.tp-nav li a:after {    
+.tp-nav li a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 12px;
     content: "";
@@ -108,9 +108,9 @@ footer h6{
     filter: blur(0.05rem);
     -webkit-filter: blur(0.05rem);
   }
-  .tp-nav li a:hover:after { 
-    width: 78%; 
-    left: 10%; 
+  .tp-nav li a:hover:after {
+    width: 78%;
+    left: 10%;
   }
 .slider-txt{
     font-family: 'Metamorphous', cursive;
@@ -124,7 +124,7 @@ footer h6{
     height: 68px;
     display:inline-block;
     margin-right:10px;
-    -webkit-box-shadow: 0px 12px 15px 3px rgba(172, 0, 0,0.35); 
+    -webkit-box-shadow: 0px 12px 15px 3px rgba(172, 0, 0,0.35);
     box-shadow: 0px 12px 15px 3px rgba(172, 0, 0,0.35);
     border-radius: 50%;
 }
@@ -243,7 +243,7 @@ footer h6{
       -ms-transform: translateY(-15px);
     }
   }
-  
+
 /* End of Arrow Bounce CSS */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background: rgba(185, 13, 13, 0.15);
@@ -266,7 +266,7 @@ footer h6{
     width: 22px;
     height: 20px;
 }
-.banner-btn li a:hover, .cto-wrap li a:hover, .btnread-more a:hover, .cto-btn:hover, .nft-rightcontent ul li a:hover{ 
+.banner-btn li a:hover, .cto-wrap li a:hover, .btnread-more a:hover, .cto-btn:hover, .nft-rightcontent ul li a:hover{
 /* Glass Button [Hover] */
 background: rgba(185, 13, 13, 0.25);
 /* Glass Button [Default] */
@@ -375,7 +375,7 @@ color: #B90D0D;
     text-shadow: 0px 0px 15px rgba(185, 13, 13, 0.5), 0px 0px 3px rgba(238, 238, 238, 0.25), 0px 0px 6px #B90D0D;
 }
 .announcementbg h1:before{
-    width:318px;
+    width:345px;
 }
 .about h1:before, .roadmap h1::before, .announcementbg h1:before, .faq-block h1::before{
     content: '';
@@ -428,7 +428,7 @@ color: #B90D0D;
     top: -132px;
     height: 62%;
     background: url(../images/dropsplatter.svg);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
 .token-w::after{
     content: '';
@@ -440,7 +440,7 @@ color: #B90D0D;
     bottom: -160px;
     height: 71%;
     background: url(../images/dropsplatter2.svg);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
 .tab-content{
     margin: 0px 48px;
@@ -522,7 +522,7 @@ color: #B90D0D;
 }
 .roadmap-tree2 img {
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 .roadmap-tree ul li a{
     display: flex;
@@ -724,7 +724,7 @@ color: #B90D0D;
     position: absolute;
     top:0;
     left:0;
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(0, 0, 0, 0.8);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     width: 100%;
@@ -968,7 +968,7 @@ article h5 {
     float: right;
     margin-left: 5px;
   }
-  
+
   .panel {
       color:#DCDCDC;
     padding: 5px 18px;
@@ -1040,7 +1040,7 @@ footer{
 .footer-sm ul li a, .footermenu li a{
     position: relative;
 }
-.footer-sm ul li a:after, .footermenu li a:after{    
+.footer-sm ul li a:after, .footermenu li a:after{
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -1054,9 +1054,9 @@ footer{
     filter: blur(0.05rem);
     -webkit-filter: blur(0.05rem);
   }
-  .footer-sm ul li a:hover:after, .footermenu li a:hover:after { 
-    width: 100%; 
-    left: 0; 
+  .footer-sm ul li a:hover:after, .footermenu li a:hover:after {
+    width: 100%;
+    left: 0;
   }
 .footer-sm ul{
     margin-top:25px;
@@ -1103,7 +1103,7 @@ footer{
     }
     .banner h1{
         font-size: 32px;
-        text-align: left; 
+        text-align: left;
     }
     .banner p{
         text-align: left;
@@ -1153,7 +1153,7 @@ footer{
         font-size: 14px;
         word-break: break-all;
         margin-top: 8px;
-        line-height: 10px; 
+        line-height: 10px;
     }
     .token-w::before{
         width: 100%;
@@ -1181,9 +1181,9 @@ footer{
     .announce-block{
         width:100%;
     }
-   
+
     /* Roadmap responsive css */
-    
+
     .bigpoint::after{
         left: 9px;
     }
@@ -1400,7 +1400,7 @@ footer{
         .top-sm-nav li a div img {
         width: 28px;
         height: 28px;
-        }                       
+        }
         .about-block a{
         min-height: 571px;
         }
