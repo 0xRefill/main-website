@@ -39,42 +39,58 @@ $(document).ready(function() {
     });
 
 
-    $.ajax({
-        url: "https://api.vlad.finance/?query=vlad_supply",
-        success: function(vlad_circulating_supply){
-            $('#vlad-circulating-supply').text(vlad_circulating_supply + ' VLAD')
-        }
-    });
+    $.when(
+        $.ajax({
+            url: "https://api.vlad.finance/?query=vlad_supply",
+            success: function(vlad_circulating_supply){
+                $('#vlad-circulating-supply').text(vlad_circulating_supply + ' VLAD')
+            }
+        }),
 
 
-    $.ajax({
-        url: "https://api.vlad.finance/?query=vlad_burned",
-        success: function(vlad_burned){
-            $('#vlad-burned').text(vlad_burned + ' VLAD')
-        }
-    });
+        $.ajax({
+            url: "https://api.vlad.finance/?query=vlad_burned",
+            success: function(vlad_burned){
+                $('#vlad-burned').text(vlad_burned + ' VLAD')
+            }
+        }),
 
-    // $.ajax({
-    //     url: "https://api.vlad.finance/?query=life_supply",
-    //     success: function(life_total_supply){
-    //         $('#life-total-supply').text(life_total_supply + ' LIFE')
-    //     }
-    // });
+        // $.ajax({
+        //     url: "https://api.vlad.finance/?query=life_supply",
+        //     success: function(life_total_supply){
+        //         $('#life-total-supply').text(life_total_supply + ' LIFE')
+        //     }
+        // }),
+
+        $.ajax({
+            url: "https://api.vlad.finance/?query=life_circulating",
+            success: function(api_life_circulating_supply){
+                lcs = api_life_circulating_supply
+                $('.life-circulating-supply').text(api_life_circulating_supply + ' LIFE')
+            }
+        }),
+    
+        $.ajax({
+            url: "https://api.vlad.finance/?query=life_burned",
+            success: function(api_life_burned){
+                life_burned = api_life_burned
+                $('.life-burned').text(life_burned + ' LIFE')
+            }
+        })
+    
+      ).then(function() {
+        cp = Math.round((lcs.replace(/,/g, "") / 414093.21) * 100);
+        lb = 100 - cp
+        $('.cp').text(cp + '%')
+        $('.lb').text(lb + '%')
+        $('.cpp').text(cp + '% - $LIFE SUPPLY');
+        $('.lbp').text(lb + '% - $LIFE BURNED');
+        $('#cpp').attr('aria-valuenow', cp).css('width', cp+'%');
+        $('#lbp').attr('aria-valuenow', lbp).css('width', lbp+'%');        
+      });
 
 
-    $.ajax({
-        url: "https://api.vlad.finance/?query=life_circulating",
-        success: function(life_circulating_supply){
-            $('#life-circulating-supply').text(life_circulating_supply + ' LIFE')
-        }
-    });
 
-    $.ajax({
-        url: "https://api.vlad.finance/?query=life_burned",
-        success: function(life_burned){
-            $('#life-burned').text(life_burned + ' LIFE')
-        }
-    });
 });
 
 $(function () {
