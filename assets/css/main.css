@@ -733,6 +733,9 @@ color: #B90D0D;
     z-index: -100;
 }
 */
+.copy-area {
+  cursor:pointer; color: red; word-wrap: break-word;
+}
 .smbtn{
     display: flex;
     align-items: center;
