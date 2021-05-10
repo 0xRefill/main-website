@@ -54,12 +54,12 @@ $(document).ready(function() {
         }
     });
 
-    $.ajax({
-        url: "https://api.vlad.finance/?query=life_supply",
-        success: function(life_total_supply){
-            $('#life-total-supply').text(life_total_supply + ' LIFE')
-        }
-    });
+    // $.ajax({
+    //     url: "https://api.vlad.finance/?query=life_supply",
+    //     success: function(life_total_supply){
+    //         $('#life-total-supply').text(life_total_supply + ' LIFE')
+    //     }
+    // });
 
 
     $.ajax({
