@@ -1,20 +1,22 @@
 var acc = document.getElementsByClassName("accordion");
-var i;
+if(acc) {
+  var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
 }
 
 $(document).ready(function() {
-
+  if($(".rotator")){
     $(".rotator").flexisel({
         visibleItems: 4,
         animationSpeed: 500,
@@ -37,6 +39,7 @@ $(document).ready(function() {
             }
         }
     });
+    }
 
 
     $.when(
@@ -113,6 +116,7 @@ $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ff
            var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
            output += `<div style="height:150px;line-height:150px; overflow:hidden;"><img src="${src}" alt="Cover image" width="300px" /></div>`;
            output += `<div class="announce-block-content">`;
+           output += `<h5 style="color: red;">${item.pubDate}</h5>`;
            output += `<h4>${item.title}</h4>`;
            var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
            yourString = yourString.replace('h4', 'p');
