@@ -736,7 +736,7 @@ color: #B90D0D;
 .smbtn{
     display: flex;
     align-items: center;
-    margin-left: -110px;
+    margin-left: -10px;
 }
 .smbtn ul li a{
     border: 1.5px solid #FFFFFF;
