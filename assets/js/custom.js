@@ -16,30 +16,7 @@ if(acc) {
 }
 
 $(document).ready(function() {
-  if($(".rotator")){
-    $(".rotator").flexisel({
-        visibleItems: 4,
-        animationSpeed: 500,
-        //autoPlay: true,
-        autoPlaySpeed: 3000,
-        pauseOnHover: true,
-        enableResponsiveBreakpoints: true,
-        responsiveBreakpoints: {
-            portrait: {
-                changePoint:480,
-                visibleItems: 1
-            },
-            landscape: {
-                changePoint:640,
-                visibleItems: 2
-            },
-            tablet: {
-                changePoint:768,
-                visibleItems: 3
-            }
-        }
-    });
-    }
+
 
 
     $.when(
@@ -72,7 +49,7 @@ $(document).ready(function() {
                 $('.life-circulating-supply').text(api_life_circulating_supply + ' LIFE')
             }
         }),
-    
+
         $.ajax({
             url: "https://api.vlad.finance/?query=life_burned",
             success: function(api_life_burned){
@@ -80,7 +57,7 @@ $(document).ready(function() {
                 $('.life-burned').text(life_burned + ' LIFE')
             }
         })
-    
+
       ).then(function() {
         cp = Math.round((lcs.replace(/,/g, "") / 414093.21) * 100);
         lb = 100 - cp
@@ -89,7 +66,7 @@ $(document).ready(function() {
         $('.cpp').text(cp + '% - $LIFE SUPPLY');
         $('.lbp').text(lb + '% - $LIFE BURNED');
         $('#cpp').attr('aria-valuenow', cp).css('width', cp+'%');
-        $('#lbp').attr('aria-valuenow', lbp).css('width', lbp+'%');        
+        $('#lbp').attr('aria-valuenow', lbp).css('width', lbp+'%');
       });
 
 

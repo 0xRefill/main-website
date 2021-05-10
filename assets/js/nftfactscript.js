@@ -10,7 +10,7 @@
  */
 (function ($) {
     $.fn.flexisel = function(options) {
-	
+
         var defaults = $.extend({
             visibleItems : 4,
             animationSpeed : 200,
@@ -21,25 +21,25 @@
             enableResponsiveBreakpoints : true,
             clone : true,
             responsiveBreakpoints : {
-                portrait: { 
+                portrait: {
                     changePoint:480,
                     visibleItems: 1
-                }, 
-                landscape: { 
+                },
+                landscape: {
                     changePoint:640,
                     visibleItems: 2
                 },
-                tablet: { 
+                tablet: {
                     changePoint:768,
                     visibleItems: 3
                 }
             }
         }, options);
-        
+
         /******************************
         Private Variables
          *******************************/
-         
+
         var object = $(this);
         var settings = $.extend(defaults, options);
         var itemsWidth; // Declare the global width of each item in carousel
@@ -47,7 +47,7 @@
         var itemsVisible = settings.visibleItems; // Get visible items
         var totalItems = object.children().length; // Get number of elements
         var responsivePoints = [];
-        
+
         /******************************
         Public Methods
         *******************************/
@@ -59,7 +59,7 @@
                     methods.initializeItems();
                 });
             },
-		    
+
             /******************************
             Initialize Items
             Fully initialize everything. Plugin is loaded and ready after finishing execution
@@ -70,10 +70,10 @@
                 var innerHeight = listParent.height();
                 var childSet = object.children();
                 methods.sortResponsiveObject(settings.responsiveBreakpoints);
-                
+
                 var innerWidth = listParent.width(); // Set widths
                 itemsWidth = (innerWidth) / itemsVisible;
-                childSet.width(itemsWidth);        
+                childSet.width(itemsWidth);
                 if (settings.clone) {
                     childSet.last().insertBefore(childSet.first());
                     childSet.last().insertBefore(childSet.first());
@@ -86,7 +86,7 @@
                 $(window).trigger("resize"); // needed to position arrows correctly
 
             },
-            
+
 	    /******************************
             Append HTML
             Add additional markup needed by plugin to the DOM
@@ -134,7 +134,7 @@
                     childSet.width(itemsWidth);
                     if (settings.clone) {
                         object.css({
-                            'left' : -itemsWidth                            
+                            'left' : -itemsWidth
                         });
                     }else {
                         object.css({
@@ -184,23 +184,23 @@
             /******************************
             Set Responsive Events
             Set breakpoints depending on responsiveBreakpoints
-            *******************************/            
-            
+            *******************************/
+
             setResponsiveEvents: function() {
                 var contentWidth = $('html').width();
-                
+
                 if(settings.enableResponsiveBreakpoints) {
-                    
-                    var largestCustom = responsivePoints[responsivePoints.length-1].changePoint; // sorted array 
-                    
+
+                    var largestCustom = responsivePoints[responsivePoints.length-1].changePoint; // sorted array
+
                     for(var i in responsivePoints) {
-                        
-                        if(contentWidth >= largestCustom) { // set to default if width greater than largest custom responsiveBreakpoint 
+
+                        if(contentWidth >= largestCustom) { // set to default if width greater than largest custom responsiveBreakpoint
                             itemsVisible = settings.visibleItems;
                             break;
                         }
                         else { // determine custom responsiveBreakpoint to use
-                        
+
                             if(contentWidth < responsivePoints[i].changePoint) {
                                 itemsVisible = responsivePoints[i].visibleItems;
                                 break;
@@ -215,23 +215,23 @@
             /******************************
             Sort Responsive Object
             Gets all the settings in resposiveBreakpoints and sorts them into an array
-            *******************************/            
-            
+            *******************************/
+
             sortResponsiveObject: function(obj) {
-                
+
                 var responsiveObjects = [];
-                
+
                 for(var i in obj) {
                     responsiveObjects.push(obj[i]);
                 }
-                
+
                 responsiveObjects.sort(function(a, b) {
                     return a.changePoint - b.changePoint;
                 });
-            
+
                 responsivePoints = responsiveObjects;
             },
-            
+
             /******************************
             Scroll Left
             *******************************/
@@ -256,7 +256,7 @@
                             complete : function() {
                                 if (settings.clone) {
                                     childSet.last().insertBefore(
-                                            childSet.first()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)                                   
+                                            childSet.first()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)
                                 }
                                 methods.adjustScroll();
                                 canNavigate = true;
@@ -267,7 +267,7 @@
             },
             /******************************
             Scroll Right
-            *******************************/            
+            *******************************/
             scrollRight : function() {
                 var listParent = object.parent();
                 var innerWidth = listParent.width();
@@ -275,19 +275,19 @@
                 itemsWidth = (innerWidth) / itemsVisible;
 
                 var difObject = (itemsWidth - innerWidth);
-                var objPosition = (object.position().left + ((totalItems-itemsVisible)*itemsWidth)-innerWidth);    
-                
+                var objPosition = (object.position().left + ((totalItems-itemsVisible)*itemsWidth)-innerWidth);
+
                 if((difObject <= Math.ceil(objPosition)) && (!settings.clone)){
                     if (canNavigate == true) {
-                        canNavigate = false;                    
-    
+                        canNavigate = false;
+
                         object.animate({
                             'left' : "-=" + itemsWidth
                         }, {
                             queue : false,
                             duration : settings.animationSpeed,
                             easing : "linear",
-                            complete : function() {                                
+                            complete : function() {
                                 methods.adjustScroll();
                                 canNavigate = true;
                             }
@@ -296,26 +296,26 @@
                 } else if(settings.clone){
                     if (canNavigate == true) {
                         canNavigate = false;
-    
+
                         var childSet = object.children();
-    
+
                         object.animate({
                             'left' : "-=" + itemsWidth
                         }, {
                             queue : false,
                             duration : settings.animationSpeed,
                             easing : "linear",
-                            complete : function() {                                
-                                    childSet.first().insertAfter(childSet.last()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)                                
+                            complete : function() {
+                                    childSet.first().insertAfter(childSet.last()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)
                                 methods.adjustScroll();
                                 canNavigate = true;
                             }
                         });
                     }
-                };                
+                };
             },
             /******************************
-            Adjust Scroll 
+            Adjust Scroll
              *******************************/
             adjustScroll : function() {
                 var listParent = object.parent();
@@ -340,3 +340,28 @@
         }
     };
 })(jQuery);
+
+if($(".rotator")){
+  $(".rotator").flexisel({
+      visibleItems: 4,
+      animationSpeed: 500,
+      //autoPlay: true,
+      autoPlaySpeed: 3000,
+      pauseOnHover: true,
+      enableResponsiveBreakpoints: true,
+      responsiveBreakpoints: {
+          portrait: {
+              changePoint:480,
+              visibleItems: 1
+          },
+          landscape: {
+              changePoint:640,
+              visibleItems: 2
+          },
+          tablet: {
+              changePoint:768,
+              visibleItems: 3
+          }
+      }
+  });
+  }
