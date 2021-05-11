@@ -84,7 +84,7 @@ var $content = $('#medium');
 var data = {
    rss: 'https://vlad-finance.medium.com/feed'
 };
-$.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40vlad-finance', data, function (response) {
+$.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40vlad-finance?t=-1', data, function (response) {
    if (response.status == 'ok') {
 
        var output = '';
