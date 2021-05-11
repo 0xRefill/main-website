@@ -841,15 +841,13 @@ color: #B90D0D;
   /* NFT Section */
   .nftbg{
       /*background-image: url(../images/nftbg.png);*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       background-repeat: no-repeat;
       background-size: cover;
       height: 110vh;
       background: radial-gradient(69.48% 134.06% at 77.85% 50%, #340100 0%, rgba(0, 0, 0, 0) 100%);
-  }
-  .nftbg .container {
-    top: 50%;
-    -ms-transform: translateY(50%);
-    transform: translateY(50%);
   }
   .nft-block, .nft-rightblock{
       display: flex;
