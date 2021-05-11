@@ -520,3 +520,11 @@ line-height: 22px;
         height: 95vh;
     }
 }
+@media (max-width: 767px){
+    .life-table {
+        padding: 5px;
+    }
+    .life-table td {
+        font-size: 10px;
+    }
+}
