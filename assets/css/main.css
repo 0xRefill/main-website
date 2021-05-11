@@ -784,7 +784,7 @@ color: #B90D0D;
 }
 .announce-block img{
     border-radius: 8px;
-    height: 200px;
+    max-height: 200px;
     width: 100%;
 }
 .btnread-more a{
