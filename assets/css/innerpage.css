@@ -62,6 +62,7 @@
 }
 .innersec, .lifesec, .alifesec, .nftfactsec, .breakdown{
     padding:150px 0px 0px 0px;
+    overflow: hidden;
 }
 .side-main, .side-main-two, .team-blockbg{
     position: relative;
