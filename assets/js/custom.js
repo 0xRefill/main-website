@@ -91,10 +91,14 @@ $.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ff
            var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
            var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
            var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
+           var pubDate = new Date(item.pubDate);
+           var options = { year: 'numeric', month: 'long', day: 'numeric' };
+
            output += `<div style="height:150px;line-height:150px; overflow:hidden;"><img src="${src}" alt="Cover image" width="300px" /></div>`;
            output += `<div class="announce-block-content">`;
-           output += `<h5 style="color: red;">${item.pubDate}</h5>`;
+           output += `<h5 style="color: #B90D0D;">${pubDate.toLocaleDateString("en-US", options)}</h5>`;
            output += `<h4>${item.title}</h4>`;
+
            var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
            yourString = yourString.replace('h4', 'p');
            yourString = yourString.replace('h3', 'p');
