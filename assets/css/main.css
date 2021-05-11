@@ -334,6 +334,7 @@ color: #B90D0D;
 .about, .token-sec, .roadmap-sec, .nftbg{
     background:#0D0E13;
     position: relative;
+    overflow: hidden;
 }
 .total-details li {
     font-size: 17px;
@@ -1012,6 +1013,7 @@ footer{
     background-size: cover;
     background-position: 100% 0;
     background-color: #020203;
+    overflow: hidden;
 }
 footer{
     padding: 60px 0px;
