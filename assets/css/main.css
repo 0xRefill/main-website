@@ -416,7 +416,6 @@ color: #B90D0D;
     opacity: 1;
 }
 .token-w{
-    overflow: hidden;
     position:relative;
     z-index: 0;
 }
