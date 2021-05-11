@@ -734,7 +734,10 @@ color: #B90D0D;
 }
 */
 .copy-area {
-  cursor:pointer; color: red; word-wrap: break-word;
+  cursor:pointer; color: #b90d0d; word-wrap: break-word;
+}
+.copy-area:hover{
+    opacity: .8;
 }
 .smbtn{
     display: flex;
