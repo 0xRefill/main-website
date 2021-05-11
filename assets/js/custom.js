@@ -1,6 +1,6 @@
 if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
-     $('.side-wrap').css("background", "rgba(31, 34, 41, 0.9)");
-     $('.token-block').css("background", "rgba(31, 34, 41, 0.9)");
+     $('.side-wrap').css("background", "rgba(31, 34, 41, 0.95)");
+     $('.token-block').css("background", "rgba(31, 34, 41, 0.95)");
 }
 
 var acc = document.getElementsByClassName("accordion");
