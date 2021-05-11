@@ -319,10 +319,10 @@ color: #B90D0D;
     left: 107px;
 }
 .nft-2{
-    width: 270px;
+    width: 350px;
     position: absolute;
-    top: -90px;
-    right:60px;
+    top: -100px;
+    right: 20px;
 }
 .nft3{
     width: 230px;
@@ -1124,9 +1124,9 @@ footer{
         top: 175px;
     }
     .nft-2{
-        width: 220px;
-        top: -35px;
-        left: 135px;
+        width: 350px;
+        top: -60px;
+        left: 80px;
 
     }
     .nft3{
