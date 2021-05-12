@@ -299,6 +299,7 @@ color: #B90D0D;
     padding: 100px 0px 120px 0px;
 }
 .artist-lunch p, .nft-art-content p{
+    font-size: 18px;
     font-style: normal;
     font-weight: normal;
     line-height: 30px;
