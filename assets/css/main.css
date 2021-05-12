@@ -17,7 +17,7 @@ a {
     color: #B90D0D;
 }
 p{
-    font-size:17px;
+    font-size:18px;
     line-height: 30px;
 }
 /* .active:after {
@@ -906,6 +906,7 @@ color: #B90D0D;
     border-radius: 4px;
 }
 article p{
+    font-size: 17px;
     line-height: 27px;
 }
 
